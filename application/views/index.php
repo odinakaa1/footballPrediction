@@ -162,29 +162,38 @@
             </section>
     
             <section id="query-selectors-container">
-                <!-- <div class="query-selectors active"> All</div>
-                <div class="query-selectors "> Today </div> -->
-                <div class="query-selectors "> <select class="form-control">
-                                                <option>48zz</option>
-                                                <option>Today</option>  
-                                                <option>Tomorrow</option> 
-                                                </select>
-                </div>
+                                            <select class="form-control">
+                                            <option selected="">ALL</option>    
+                                            <option>UEFA</option>
+                                                <option>AFC</option>  
+                                                <option>CAF</option> 
+                                                <option>CONCACAF</option> 
+                                                <option>OFC</option> 
+                                                <option>OFCONMEBOLC</option> 
+                                            </select>
 
-                <div class="query-selectors2 "> <select class="form-control">
-                                                <option>All League</option>
-                                                <option>Today</option>  
-                                                <option>Tomorrow</option> 
-                                                </select>
-                </div>
-                <div class="query-selectors "> <input type="text" class="form-control" placeholder="27/02/2019"> 
-            </div>
+                                            <select class="form-control">
+                                                <option>1X2</option>
+                                                <option>OV0.5</option>  
+                                                <option>BTTS</option> 
+                                                <option>OV3.5</option> 
+                                                <option>HOV1.5</option> 
+                                                <option>OV2.5</option> 
+                                                <option>AOV1.5</option>
+                                                <option>AOV0.5</option> 
+                                            </select>
+                                            <input class="form-control"placeholder="28/10/2019"type="text"/>
+                                            <input type="submit" value="GO" class="btn">
+            
             </section>
 
             <h5 class="bet-header">Free Betting Predictions</h5>
             <section class="predictions">
              <?php $this->general_routines->showAllprediction();?>
+            <div id="goUp"><a href="#query-selectors-container">
+            <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
 
+            </a></div>
                 
 
                    

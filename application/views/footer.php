@@ -20,5 +20,6 @@
 	
 
 	<script src="https://code.jquery.com/jquery-migrate-3.0.1.js"></script>
+	<script type="text/javascript" src="<?php echo base_url('js/main.js')?>"></script>
 </body>
 </html>
