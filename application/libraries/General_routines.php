@@ -73,18 +73,19 @@ class General_routines {
                                 </button>   
                                 </span>';
                                         }
-                                echo '<!-- Button trigger modal -->
-                                        <div id="moreInfo"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong">
-                                        TeamsDistance  (km): '.$value->distance_between_teams.'
+                                echo '<hr>
+                                        <div id="moreInfo"><button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <i class="fa fa-road" aria-hidden="true"></i><small>Km Apart: </small>'.$value->distance_between_teams.'
                                         </button>
-                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong">
-                                        Field: '.$value->field_width.'X'.$value->field_length.'
+                                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <i class="fa fa-arrows" aria-hidden="true"></i><small>Pitch: </small> '.$value->field_width.'X'.$value->field_length.'
                                         </button>
                                         </div>
-                                        <div id="moreInfo"><button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong">
-                                        Status: '.$value->status.'
+                                        <div id="moreInfo"><button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <i class="fa fa-users" aria-hidden="true"></i><small>Capacity</small>: '.$value->stadium_capacity.'
                                         </button>
-                                        <button type="button" class="btn btn-primary btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLong">
+                                        <i class="fa fa-futbol-o" aria-hidden="true"></i>
                                         Result: '.$value->result.'
                                         </button>
                                         </div>
