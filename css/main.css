@@ -161,15 +161,22 @@ margin-top: 20vh;
 .top-banner{
   height: 80px;
   width: 100%;
-  
+  position: fixed;
+  top: 8%;
   text-align: center;
   background-color: #b3d4fc;
   color: white;
   font-weight: bold;
+  z-index: 1;
 
+}
+.headerImg{
+  height: 1.5em;
+  width: 1.5em;
 }
 
 #wrapper{
+  
   display: flex;
   flex-direction: row;
   justify-content: center;
@@ -191,12 +198,18 @@ margin-top: 20vh;
    }
 
    #page-selectors-container{
+    
     display: flex;
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    margin-left: 3%;
+    /* margin-left: 3%; */
     /* border-bottom: 1.5px solid silver; */
+    position: fixed;
+    top: 0;
+    left: 0;
+    background-color: white;
+    z-index: 3;
   }
 
   
@@ -205,6 +218,10 @@ margin-top: 20vh;
     display: flex;
     flex-direction: row;
     justify-content: center;
+    position: fixed;
+    left: center;
+    top: 21%;
+    z-index: 1;
     
     
     
@@ -217,10 +234,21 @@ margin-top: 20vh;
     padding: .5em .5em;
     
   }
+   #page-selectors-container #menu{
+  margin-left:auto; 
+  }
   #wrapper h5{
     margin: 10px;
   }
-  
+  /* .menu{
+    background-image: url("http://localhost/bet/img/hamburger.png");
+    background-attachment: fixed;
+    background-position: center;
+    
+  }
+  .menu img{
+    width: .1em;
+  } */
   .query-selectors{
     font-weight: bold;
     margin-top: .5em;
@@ -228,24 +256,42 @@ margin-top: 20vh;
     
   }
   #query-selectors-container select {
-    width: 7em;
+    width: 8em;
     margin: .1em;
     height: 2em;
     font-size: 1em;
     padding: 0;
     font-size: .8em;
+    border-color: transparent;
+    background-color: silver;
+    color: white;
+    
     
   } 
+  #query-selectors-container .market {
+    width: 4em;
+  }
+
   #query-selectors-container input[type=text]{
-    width: 7em;
-    margin-top:0.2em;
+    width: 5em;
+    margin-top:0.1em;
+    margin-right: .2em;
     height: 2em;
+    color: white !important;
+    background-color: silver;
+    margin-left: .1em;
     font-weight: normal;
     font-size: .8em;
     /* border-top: 0;
     border-right: 0;
     border-right: 0; */
+    font-size: 80%;
+    /* font-weight: bold; */
+    
    
+  }
+  #query-selectors-container ::placeholder{
+    color: white
   }
 
   .query-selectors2{
@@ -265,21 +311,39 @@ margin-top: 20vh;
     flex-direction: row;
     flex-wrap: wrap;
     justify-content: center;
+    position: relative;
+    top: 4.1%;
+ 
   }
 
   
   
   .bet-header{text-align: center;
-  margin-top: 1%;
+ position: relative;
+ top: 4%;
+
+  margin-bottom: 1%;
   }
-  
+  .prediction-summary .dropdown{
+    float: right;
+  }
+ 
+  .prediction-summary .dropdown-toggle{
+    /* letter-spacing: .5em; */
+  }
+  .prediction-summary .dropdown .btn{
+    background-color:transparent;
+    border-color: transparent;
+    color: grey;
+    font-weight: bold;
+  }
   .prediction-summary{
     width: 320px;
     height: 580px;
     padding: 2%;
     background-color: white;
     margin: 1%;
-    font-size: 80%;
+    font-size: 60%;
     /* height: 100px; */
     border-radius: 3%;
     /* border-bottom: 1.5px solid silver;

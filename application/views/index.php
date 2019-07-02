@@ -5,7 +5,7 @@
 		<p>Responsive, Lightweight, Multi-Level Dropdown Menu.</p>
 	</div> -->
 
-    <nav class="navbar fixed-top bg-dark" style="padding: 0px;" class="container-fluid" ">
+    <!-- <nav class="navbar fixed-top bg-dark" style="padding: 0px;" class="container-fluid" ">
         <div class="stellarnav"> 
             <ul> <img src="<?php  echo base_url('tile.png');?>" alt="" style="height: 10%; width: 2%; margin-left: -200px;" id>
                 <li><a href="">Predictions</a>
@@ -132,10 +132,10 @@
                     </ul>
                 </li>
             </ul>
-        </div><!-- .stellarnav -->
-    </nav>
+        </div> 
+    </nav> -->
    
-    <header >
+    <!-- <header >
             <div style=" background-image: url('http://localhost/bet/img/hero-image.jpg')" class="hero-image">
                <h1 id="header">
                   Win all bets!
@@ -148,17 +148,50 @@
                 <a href="#top-banner"><i class="fa fa-angle-double-down fa-4x"></i></a>
                 </div>
             </div>
-    </header>
+    </header> -->
     <div class="top-banner  " id="top-banner">Adds goes here</div>
     <main id="wrapper">
         
 
             
-        <section id="main-side" class="wow bounceInUp" data-wow-offset="2"  data-wow-iteration="1">
+        <section id="main-side"  data-wow-offset="2"  data-wow-iteration="1">
             <section id="page-selectors-container">
-                <div class="page-selectors active"> Bet tips</div>
-                <div class="page-selectors "> Odds </div>
-                <div class="page-selectors "> Live </div>
+                <!-- <div class="page-selectors active"> Bet tips</div> -->
+                <div class="page-selectors active"> <img src="<?php echo base_url('img/allPrediction.png')?>" alt="Bet tips" class="headerImg"></div>
+                <div class="page-selectors "> <img src="<?php echo base_url('img/performance.png')?>" alt="Performance" class="headerImg"> </div>
+                <div class="page-selectors "> <img src="<?php echo base_url('img/24_48H_predicts.png')?>" alt="24/48H tips" class="headerImg"> </div>
+                <div class="page-selectors " id="menu">
+ 
+                <!-- <img src="<?php echo base_url('img/24_48H_predicts.png')?>" alt="24/48H tips" class="headerImg"> </div> -->
+                
+                <div class="dropdown">
+                <button class="btn btn-primary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                    More
+                </button>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton" id="menu">
+                    <a class="dropdown-item" href="#">How it works</a>
+                    <a class="dropdown-item" href="#">FAQ</a>
+                    <a class="dropdown-item" href="#">Support</a>
+                    <div class="dropdown-divider"></div>
+                    <form class="px-4 py-3">
+                    <div class="form-group">
+                    <label for="exampleDropdownFormEmail1">Email address</label>
+                    <input type="email" class="form-control" id="exampleDropdownFormEmail1" placeholder="email@example.com">
+                    </div>
+                    <div class="form-group">
+                    <label for="exampleDropdownFormPassword1">Password</label>
+                    <input type="password" class="form-control" id="exampleDropdownFormPassword1" placeholder="Password">
+                    </div>
+                    <div class="form-check">
+                    <input type="checkbox" class="form-check-input" id="dropdownCheck">
+                    <label class="form-check-label" for="dropdownCheck">
+                        Remember me
+                    </label>
+                    </div>
+                    <button type="submit" class="btn btn-primary">Sign in</button>
+                </form>
+                </div>
+                </div>
             </section>
     
             <section id="query-selectors-container">
@@ -172,7 +205,7 @@
                                                 <option>OFCONMEBOLC</option> 
                                             </select>
 
-                                            <select class="form-control">
+                                            <select class="form-control market">
                                                 <option>1X2</option>
                                                 <option>OV0.5</option>  
                                                 <option>BTTS</option> 
@@ -187,10 +220,12 @@
             
             </section>
 
-            <h5 class="bet-header">Free Betting Predictions</h5>
+            <head>
+            <h5 class="bet-header wow bounceInUp" id="top">Free bet tip</h5>
+            </head>
             <section class="predictions">
              <?php $this->general_routines->showAllprediction();?>
-            <div id="goUp"><a href="#query-selectors-container">
+            <div id="goUp"><a href="#top">
             <i class="fa fa-angle-double-up fa-2x" aria-hidden="true"></i>
 
             </a></div>

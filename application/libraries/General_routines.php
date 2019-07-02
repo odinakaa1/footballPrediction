@@ -16,7 +16,10 @@ class General_routines {
                 $i= 0;
                 foreach ($json as  $data) {
                         
-                        foreach ($data as $value) {   
+                        foreach ($data as $value) { 
+                                $total_strength = $value->home_strength+$value->away_strength;
+                                $home_strength = ($value->home_strength/$total_strength)*100;
+                                $away_strength = ($value->away_strength/$total_strength)*100;
                                 echo ' <div class="prediction-summary">
                                 <div class="prediction-team-title">'.$value->start_date.'
                                </div>
@@ -26,6 +29,22 @@ class General_routines {
                                 Prediction <span class="badge badge-light"><strong>'.$value->prediction.'</strong></span>
                                 </button>   
                                 </a>
+                                <span class="dropdown dropleft">
+                                        <a class="btn btn-primary dropdown-toggle" href="#" role="button" id="dropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                                        ...
+                                        </a>
+                              
+                                        <div class="dropdown-menu" aria-labelledby="dropdownMenuLink">
+                                                <a class="dropdown-item" href="">Status: '.$value->status.'</a>
+                                                <a class="dropdown-item" href="#">Home Strength: '.round($home_strength, 2).'%</a>
+                                                <a class="dropdown-item" href="#">Away Strength: '.round($away_strength, 2).'%</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="'.$value->id.'">This match other predictions</a>
+                                                <div class="dropdown-divider"></div>
+                                                <a class="dropdown-item" href="#">All prediction Performance </a>
+
+                                        </div>
+                                </span>
                                 <br><br>
 
                                
@@ -86,7 +105,7 @@ class General_routines {
                                         </button>
                                         <button type="button" class="btn btn-dark btn-sm" data-toggle="modal" data-target="#exampleModalLong">
                                         <i class="fa fa-futbol-o" aria-hidden="true"></i>
-                                        Result: '.$value->result.'
+                                        Status: '.$value->status.'
                                         </button>
                                         </div>
                                 
